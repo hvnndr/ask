@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+     <nav>
+    <% if current_user %>
+      Logged in as <strong><%= current_user.username %></strong>
+      <%= link_to 'Logout', logout_path, data:{turbo_method: :delete} %>
+    <% else %>
+      <%= link_to 'Login', login_path %>
+    <% end %>
+  </nav>
+    <%= yield %>  
   </body>
 </html>
