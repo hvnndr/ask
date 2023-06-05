@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "users#index"
+  root "questions#index"
 
   #sessions
   get '/login', to: 'sessions#new'
@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   
   # fully resources
   resources :users
+  resources :questions
+
   
 end

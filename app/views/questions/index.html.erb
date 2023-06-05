@@ -1,0 +1,11 @@
+<h1>My questions</h1>
+
+<ul>
+<% @user_questions.each do |question|%>
+    <div>
+        <p>
+            <%= question.description %>
+        </p>
+    </div>
+<% end %>
+<ul>
